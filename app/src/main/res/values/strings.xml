@@ -1,4 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Tapis de course</string>
+
+    <string name="setup_title">Combien de tapis dans la salle ?</string>
+    <string name="setup_subtitle">Le tapis 1 est le plus à gauche. Vous pourrez changer ce nombre à tout moment.</string>
+    <string name="setup_confirm">Valider</string>
+
+    <string name="count_open">Modifier le nombre de tapis (%1$d)</string>
+    <string name="count_panel_label">Nombre de tapis</string>
+    <string name="count_remove_title">Retirer le tapis %1$d ?</string>
+    <string name="count_remove_message">Il a déjà des avis. Son historique est conservé et réapparaîtra si vous le rajoutez.</string>
+    <string name="count_remove_confirm">Retirer</string>
+    <string name="count_remove_cancel">Annuler</string>
+    <string name="count_decrease">Retirer un tapis</string>
+    <string name="count_increase">Ajouter un tapis</string>
+
+    <string name="error_generic">Une erreur est survenue. Réessayez.</string>
+    <string name="history_open">Voir l\'historique</string>
+
+    <string name="floor_plan_left_side">↑ Côté gauche de la salle</string>
+    <string name="floor_plan_right_side">↓ Côté droit de la salle</string>
+
+    <string name="treadmill_number">Tapis %1$d</string>
+
+    <string name="condition_working">Fonctionne</string>
+    <string name="condition_issues">Soucis</string>
+    <string name="condition_out_of_order">Hors service</string>
+    <string name="condition_never_reviewed">Jamais évalué</string>
+
+    <string name="review_comment_label">Commentaire (facultatif)</string>
+    <string name="review_comment_counter">%1$d / %2$d</string>
+    <string name="review_confirm">Valider</string>
+    <string name="review_saved">Avis enregistré</string>
+    <string name="review_undo">Annuler</string>
+
+    <string name="age_today">aujourd\'hui</string>
+    <string name="age_days">il y a %1$d j</string>
+    <string name="age_weeks">il y a %1$d sem.</string>
+    <string name="age_months">il y a %1$d mois</string>
+
+    <string name="history_title">Tapis %1$d : historique</string>
+    <string name="history_empty">Aucun avis pour ce tapis.</string>
+    <string name="history_delete">Supprimer cet avis</string>
+    <string name="navigate_back">Retour</string>
+
+    <string name="settings_title">Paramètres</string>
+    <string name="settings_side_label">Position des tapis à l\'écran</string>
+    <string name="settings_side_left">Gauche</string>
+    <string name="settings_side_right">Droite</string>
+    <string name="settings_freshness_intro">Au-delà de ces durées, la couleur d\'un tapis s\'atténue pour rappeler que son avis date.</string>
+    <string name="settings_recent_label">Avis récent jusqu\'à (jours)</string>
+    <string name="settings_old_label">Avis ancien au-delà de (jours)</string>
+    <string name="settings_decrease">Diminuer : %1$s</string>
+    <string name="settings_increase">Augmenter : %1$s</string>
 </resources>
