@@ -6,8 +6,10 @@ import com.naynff.treadmilltracker.domain.model.TreadmillCondition
 import com.naynff.treadmilltracker.domain.model.TreadmillReview
 import com.naynff.treadmilltracker.domain.model.TreadmillSide
 import com.naynff.treadmilltracker.domain.model.TreadmillSnapshot
+import com.naynff.treadmilltracker.domain.model.WorkoutSession
 import com.naynff.treadmilltracker.domain.repository.SettingsRepository
 import com.naynff.treadmilltracker.domain.repository.TreadmillRepository
+import com.naynff.treadmilltracker.domain.repository.WorkoutRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.combine
@@ -82,5 +84,31 @@ class FakeSettingsRepository(
 
     override suspend fun setTreadmillSide(side: TreadmillSide) {
         state.update { it.copy(treadmillSide = side) }
+    }
+}
+
+class FakeWorkoutRepository : WorkoutRepository {
+    val sessions = MutableStateFlow<List<WorkoutSession>>(emptyList())
+    var failure: Exception? = null
+    private var nextId = 1L
+
+    override fun observeSessions(): Flow<List<WorkoutSession>> =
+        sessions.map { all ->
+            all.sortedWith(compareByDescending<WorkoutSession> { it.endedAt }.thenByDescending { it.id })
+        }
+
+    override suspend fun getSession(id: Long): WorkoutSession? = sessions.value.find { it.id == id }
+
+    override suspend fun getLatestSession(): WorkoutSession? = sessions.value.maxByOrNull { it.endedAt }
+
+    override suspend fun saveSession(session: WorkoutSession): Long {
+        failure?.let { throw it }
+        val saved = if (session.id == 0L) session.copy(id = nextId++) else session
+        sessions.update { all -> all.filterNot { it.id == saved.id } + saved }
+        return saved.id
+    }
+
+    override suspend fun deleteSession(id: Long) {
+        sessions.update { all -> all.filterNot { it.id == id } }
     }
 }
