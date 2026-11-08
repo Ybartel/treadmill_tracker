@@ -53,4 +53,69 @@
     <string name="settings_old_label">Avis ancien au-delà de (jours)</string>
     <string name="settings_decrease">Diminuer : %1$s</string>
     <string name="settings_increase">Augmenter : %1$s</string>
+    <string name="tab_treadmills">Tapis</string>
+    <string name="tab_sessions">Séances</string>
+
+    <plurals name="session_count">
+        <item quantity="one">%1$d séance</item>
+        <item quantity="many">%1$d séances</item>
+        <item quantity="other">%1$d séances</item>
+    </plurals>
+    <string name="metric_sessions">Séances</string>
+    <string name="metric_time">Temps</string>
+    <string name="metric_duration">Durée</string>
+    <string name="metric_distance">Distance</string>
+    <string name="metric_speed">Vitesse</string>
+    <string name="metric_average_speed">Vitesse moy.</string>
+    <string name="metric_pace">Allure</string>
+    <string name="metric_steps">Pas</string>
+    <string name="metric_cadence">Cadence</string>
+    <string name="metric_stride">Foulée</string>
+    <string name="metric_missing">—</string>
+
+    <string name="sessions_title">Séances</string>
+    <string name="sessions_add">Enregistrer une séance</string>
+    <string name="sessions_this_week">Cette semaine</string>
+    <string name="sessions_open_stats">Voir les statistiques</string>
+    <string name="sessions_last_week">La semaine dernière : %1$s</string>
+    <string name="sessions_empty_title">À vous de jouer</string>
+    <string name="sessions_empty_body">Enregistrez votre première séance en sortant du tapis, avec le bouton +.</string>
+    <string name="session_deleted">Séance supprimée</string>
+    <string name="session_undo">Annuler</string>
+    <string name="session_time_range">%1$s – %2$s</string>
+
+    <string name="stats_title">Statistiques</string>
+    <string name="stats_previous_week">Semaine précédente</string>
+    <string name="stats_next_week">Semaine suivante</string>
+    <string name="stats_back_to_current">Cette semaine</string>
+    <string name="stats_steps_filled">Pas renseignés : %1$d / %2$d</string>
+    <string name="stats_steps_all_filled">Toutes les séances ont leurs pas</string>
+    <string name="stats_add_steps">Ajouter les pas</string>
+    <string name="stats_daily_distance">%1$s : %2$s</string>
+    <string name="stats_empty_current_title">Nouvelle semaine, compteurs à zéro</string>
+    <string name="stats_empty_current_body">La semaine dernière : %1$s. Prêt à faire mieux ?</string>
+    <string name="stats_empty_first_body">Enregistrez votre première séance pour suivre vos progrès.</string>
+    <string name="stats_empty_past">Aucune séance cette semaine</string>
+
+    <string name="form_new_title">Nouvelle séance</string>
+    <string name="form_edit_title">Modifier la séance</string>
+    <string name="form_close">Fermer</string>
+    <string name="form_delete">Supprimer la séance</string>
+    <string name="form_prefilled">Prérempli avec votre dernière séance</string>
+    <string name="form_minutes">min</string>
+    <string name="form_kmh">km/h</string>
+    <string name="form_decrease">Diminuer : %1$s</string>
+    <string name="form_increase">Augmenter : %1$s</string>
+    <string name="form_steps_label">Nombre de pas</string>
+    <string name="form_steps_hint">Ajoutez-les pour obtenir cadence et foulée</string>
+    <string name="form_ended_now">Terminée maintenant · %1$s</string>
+    <string name="form_ended_at">Terminée le %1$s · %2$s</string>
+    <string name="form_change_end">Modifier</string>
+    <string name="form_save">Enregistrer</string>
+    <string name="form_error_duration">Entre %1$d et %2$d minutes</string>
+    <string name="form_error_speed">Entre %1$s et %2$s km/h</string>
+    <string name="form_error_steps">Entre %1$s et %2$s pas</string>
+    <string name="form_error_future">La fin ne peut pas être dans le futur</string>
+    <string name="form_picker_ok">OK</string>
+    <string name="form_picker_cancel">Annuler</string>
 </resources>

@@ -18,6 +18,7 @@ import kotlinx.coroutines.launch
 fun MainRoute(
     onOpenHistory: (TreadmillOverview) -> Unit,
     onOpenSettings: () -> Unit,
+    bottomBar: @Composable () -> Unit = {},
     viewModel: MainViewModel = hiltViewModel(),
 ) {
     val treadmills by viewModel.treadmills.collectAsStateWithLifecycle()
@@ -62,5 +63,6 @@ fun MainRoute(
         onDecreaseCount = viewModel::decreaseCount,
         onConfirmReduction = viewModel::confirmReduction,
         onCancelReduction = viewModel::cancelReduction,
+        bottomBar = bottomBar,
     )
 }

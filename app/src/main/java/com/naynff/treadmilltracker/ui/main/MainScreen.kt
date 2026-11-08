@@ -60,6 +60,7 @@ fun MainScreen(
     onDecreaseCount: () -> Unit,
     onConfirmReduction: () -> Unit,
     onCancelReduction: () -> Unit,
+    bottomBar: @Composable () -> Unit = {},
 ) {
     val listState = rememberLazyListState()
     var countPanelVisible by rememberSaveable { mutableStateOf(false) }
@@ -87,6 +88,7 @@ fun MainScreen(
                 },
             )
         },
+        bottomBar = bottomBar,
         snackbarHost = { SnackbarHost(snackbarHostState) },
     ) { padding ->
         Column(
