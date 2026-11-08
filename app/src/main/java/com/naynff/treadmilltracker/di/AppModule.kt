@@ -8,10 +8,13 @@ import androidx.datastore.preferences.preferencesDataStoreFile
 import androidx.room.Room
 import com.naynff.treadmilltracker.data.local.TreadmillDao
 import com.naynff.treadmilltracker.data.local.TreadmillDatabase
+import com.naynff.treadmilltracker.data.local.WorkoutSessionDao
 import com.naynff.treadmilltracker.data.repository.DataStoreSettingsRepository
 import com.naynff.treadmilltracker.data.repository.RoomTreadmillRepository
+import com.naynff.treadmilltracker.data.repository.RoomWorkoutRepository
 import com.naynff.treadmilltracker.domain.repository.SettingsRepository
 import com.naynff.treadmilltracker.domain.repository.TreadmillRepository
+import com.naynff.treadmilltracker.domain.repository.WorkoutRepository
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -31,6 +34,9 @@ abstract class RepositoryModule {
     abstract fun bindTreadmillRepository(impl: RoomTreadmillRepository): TreadmillRepository
 
     @Binds
+    abstract fun bindWorkoutRepository(impl: RoomWorkoutRepository): WorkoutRepository
+
+    @Binds
     @Singleton
     abstract fun bindSettingsRepository(impl: DataStoreSettingsRepository): SettingsRepository
 }
@@ -45,6 +51,9 @@ object AppModule {
 
     @Provides
     fun provideTreadmillDao(database: TreadmillDatabase): TreadmillDao = database.treadmillDao()
+
+    @Provides
+    fun provideWorkoutSessionDao(database: TreadmillDatabase): WorkoutSessionDao = database.workoutSessionDao()
 
     @Provides
     @Singleton
